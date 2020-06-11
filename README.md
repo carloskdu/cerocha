@@ -1,6 +1,6 @@
-# Laravel 7 with AdminLTE 3
+# Laravel 7 with AdminLTE 3 - Cerocha 
 
-## How to use
+## Como Utilizar
 
 - Clone the repository with __git clone__
 - Copy __.env.example__ file to __.env__
