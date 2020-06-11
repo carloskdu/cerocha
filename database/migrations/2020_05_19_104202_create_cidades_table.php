@@ -14,11 +14,12 @@ class CreateCidadesTable extends Migration
     public function up()
     {
         Schema::create('cidades', function (Blueprint $table) {
-            $table->integer('id');
+            $table->increments('id');
             $table->integer('id_estado');
             $table->integer('id_municipio');
             $table->char('nome_municipio', 80);
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

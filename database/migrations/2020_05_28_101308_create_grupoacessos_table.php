@@ -14,9 +14,10 @@ class CreateGrupoacessosTable extends Migration
     public function up()
     {
         Schema::create('grupoacessos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->char('grupo', 30);
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

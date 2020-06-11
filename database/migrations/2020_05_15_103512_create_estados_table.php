@@ -14,10 +14,11 @@ class CreateEstadosTable extends Migration
     public function up()
     {
         Schema::create('estados', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->char('nome_estado', 30);
             $table->char('sigla', 2);
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

@@ -14,12 +14,13 @@ class CreateUsuarioGruposTable extends Migration
     public function up()
     {
         Schema::create('usuariogrupos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('user_id');
             $table->integer('grupo_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('grupo_id')->references('id')->on('grupoacessos');
+            //$table->foreign('user_id')->references('id')->on('users');
+            //$table->foreign('grupo_id')->references('id')->on('grupoacessos');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

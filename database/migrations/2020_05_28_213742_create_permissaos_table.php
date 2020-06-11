@@ -14,12 +14,13 @@ class CreatePermissaosTable extends Migration
     public function up()
     {
         Schema::create('permissaos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('sistema_id');
             $table->integer('grupo_id');
-            $table->foreign('sistema_id')->references('id')->on('sistemas');
-            $table->foreign('grupo_id')->references('id')->on('grupoacessos');
+            //$table->foreign('sistema_id')->references('id')->on('sistemas');
+            //$table->foreign('grupo_id')->references('id')->on('grupoacessos');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

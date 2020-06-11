@@ -14,13 +14,14 @@ class CreateSistemasTable extends Migration
     public function up()
     {
         Schema::create('sistemas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->char('sistema', 30);
             $table->char('link', 100);
             $table->char('nivel', 10);
             $table->char('ativo', 1);
             $table->char('link_imagem', 50);
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

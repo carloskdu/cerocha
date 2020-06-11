@@ -14,10 +14,11 @@ class CreateParametrosTable extends Migration
     public function up()
     {
         Schema::create('parametros', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->char('descricao', 100);
-            $table->char('valor', 30);
+            $table->char('valor', 80);
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 
